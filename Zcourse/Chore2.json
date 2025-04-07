@@ -1,0 +1,93 @@
+{
+    "name": "מטלה 2",
+    "flow": [
+        {
+            "id": 1,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {
+                "type": ""
+            },
+            "mapper": {
+                "json": "{\n  \"orderData\": [\n    {\n      \"id\": \"ORD-2024-789\",\n      \"customerDetails\": {\n        \"firstName\": \"ישראל\",\n        \"lastName\": \"כהן\",\n        \"email\": \"israel@email.com\"\n      },\n      \"orderItems\": [\n        {\n          \"productName\": \"מחשב נייד\",\n          \"price\": 3499.99,\n          \"quantity\": 1\n        },\n        {\n          \"productName\": \"אייפון\",\n          \"price\": 4579,\n          \"quantity\": 1\n        },\n        {\n          \"productName\": \"מגן מסך\",\n          \"price\": 348,\n          \"quantity\": 2\n        }\n      ],\n      \"metadata\": {\n        \"orderDate\": \"2024-01-15T10:30:00Z\",\n        \"estimatedDelivery\": \"2024-01-20T14:00:00Z\",\n        \"status\": \"PENDING\",\n        \"notes\": \"משלוח עד הבית\"\n      },\n      \"isPaid\": true,\n      \"isUrgent\": false\n    },\n    {\n      \"id\": \"ORD-2024-888\",\n      \"customerDetails\": {\n        \"firstName\": \"יהודה\",\n        \"lastName\": \"הלוי\",\n        \"email\": \"yuda@email.com\"\n      },\n      \"orderItems\": [\n        {\n          \"productName\": \"מכונת קפה\",\n          \"price\": 1111,\n          \"quantity\": 1\n        },\n        {\n          \"productName\": \"קפסולות רומא\",\n          \"price\": 35,\n          \"quantity\": 12\n        }\n      ],\n      \"metadata\": {\n        \"orderDate\": \"2024-01-24T10:20:00Z\",\n        \"estimatedDelivery\": \"2024-01-3T14:00:00Z\",\n        \"status\": \"APPROVED\",\n        \"notes\": \"איסוף עצמי\"\n      },\n      \"isPaid\": false,\n      \"isUrgent\": false\n    },\n    {\n      \"id\": \"ORD-2024-999\",\n      \"customerDetails\": {\n        \"firstName\": \"נעמי\",\n        \"lastName\": \"שמר\",\n        \"email\": \"naomi@email.com\"\n      },\n      \"orderItems\": [\n        {\n          \"productName\": \"בלוק כתיבה גדול\",\n          \"price\": 56,\n          \"quantity\": 4\n        },\n        {\n          \"productName\": \"עט נובע שחור\",\n          \"price\": 2,\n          \"quantity\": 99\n        }\n      ],\n      \"metadata\": {\n        \"orderDate\": \"2024-03-22T10:20:00Z\",\n        \"estimatedDelivery\": \"2024-04-2214:00:00Z\",\n        \"status\": \"OUT OF STOCK\",\n        \"notes\": \"להתקשר לתשלום\"\n      },\n      \"isPaid\": false,\n      \"isUrgent\": true\n    }\n  ]\n}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "type": {
+                            "label": "Choose a data structure"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "util:FunctionSleep",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "duration": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {},
+                "expect": [
+                    {
+                        "name": "duration",
+                        "type": "uinteger",
+                        "label": "Delay",
+                        "validate": {
+                            "min": 1,
+                            "max": 300
+                        },
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

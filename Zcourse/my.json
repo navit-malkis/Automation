@@ -1,0 +1,170 @@
+{ "orderData": { "id": "ORD-2024-789", "customerDetails": { "firstName": "ישראל", "lastName": "כהן", "email": "israel@email.com" }, "orderItems": [ { "productName": "מחשב נייד", "price": 3499.99, "quantity": 1}, { "productName": "אייפון", "price": 4579, "quantity": 1}, { "productName": "מגן מסך", "price": 348, "quantity": 2} ], "metadata": { "orderDate": "2024-01-15T10:30:00Z", "estimatedDelivery": "2024-01-20T14:00:00Z", "status": "PENDING", "notes": "משלוח עד הבית"}, "isPaid": true, "isUrgent": false } }
+
+
+{
+    "orders_list": [
+      {
+        "orderData": {
+          "id": "ORD-2024-789",
+          "customerDetails": {
+            "firstName": "ישראל",
+            "lastName": "כהן",
+            "email": "israel@email.com"
+          },
+          "orderItems": [
+            {
+              "productName": "מחשב נייד",
+              "price": 3499.99,
+              "quantity": 1
+            },
+            {
+              "productName": "אייפון",
+              "price": 4579,
+              "quantity": 1
+            },
+            {
+              "productName": "מגן מסך",
+              "price": 348,
+              "quantity": 2
+            }
+          ],
+          "metadata": {
+            "orderDate": "2024-01-15T10:30:00Z",
+            "estimatedDelivery": "2024-01-20T14:00:00Z",
+            "status": "PENDING",
+            "notes": "משלוח עד הבית"
+          },
+          "isPaid": true,
+          "isUrgent": false
+        }
+      },
+      {
+        "orderData": {
+          "id": "ORD-2024-888",
+          "customerDetails": {
+            "firstName": "יהודה",
+            "lastName": "הלוי",
+            "email": "yuda@email.com"
+          },
+          "orderItems": [
+            {
+              "productName": "מכונת קפה",
+              "price": 1111,
+              "quantity": 1
+            },
+            {
+              "productName": "קפסולות רומא",
+              "price": 35,
+              "quantity": 12
+            }
+          ],
+          "metadata": {
+            "orderDate": "2024-01-24T10:20:00Z",
+            "estimatedDelivery": "2024-01-3T14:00:00Z",
+            "status": "PENDING",
+            "notes": "איסוף עצמי"
+          },
+          "isPaid": false,
+          "isUrgent": false
+        }
+      }
+    ]
+  }
+
+  {"orderData":[{"id":"ORD-2024-789","customerDetails":{"firstName":"ישראל","lastName":"כהן","email":"israel@email.com"},"orderItems":[{"productName":"מחשב נייד","price":3499.99,"quantity":1},{"productName":"אייפון","price":4579,"quantity":1},{"productName":"מגן מסך","price":348,"quantity":2}],"metadata":{"orderDate":"2024-01-15T10:30:00Z","estimatedDelivery":"2024-01-20T14:00:00Z","status":"PENDING","notes":"משלוח עד הבית"},"isPaid":true,"isUrgent":false},{"id":"ORD-2024-888","customerDetails":{"firstName":"יהודה","lastName":"הלוי","email":"yuda@email.com"},"orderItems":[{"productName":"מכונת קפה","price":1111,"quantity":1},{"productName":"קפסולות רומא","price":35,"quantity":12}],"metadata":{"orderDate":"2024-01-24T10:20:00Z","estimatedDelivery":"2024-01-3T14:00:00Z","status":"APPROVED","notes":"איסוף עצמי"},"isPaid":false,"isUrgent":false},{"id":"ORD-2024-999","customerDetails":{"firstName":"נעמי","lastName":"שמר","email":"naomi@email.com"},"orderItems":[{"productName":"בלוק כתיבה גדול","price":56,"quantity":4},{"productName":"עט נובע שחור","price":2,"quantity":99}],"metadata":{"orderDate":"2024-03-22T10:20:00Z","estimatedDelivery":"2024-04-2214:00:00Z","status":"OUT OF STOCK","notes":"להתקשר לתשלום"},"isPaid":false,"isUrgent":true}]}
+
+  {
+    "orderData": [
+      {
+        "id": "ORD-2024-789",
+        "customerDetails": {
+          "firstName": "ישראל",
+          "lastName": "כהן",
+          "email": "israel@email.com"
+        },
+        "orderItems": [
+          {
+            "productName": "מחשב נייד",
+            "price": 3499.99,
+            "quantity": 1
+          },
+          {
+            "productName": "אייפון",
+            "price": 4579,
+            "quantity": 1
+          },
+          {
+            "productName": "מגן מסך",
+            "price": 348,
+            "quantity": 2
+          }
+        ],
+        "metadata": {
+          "orderDate": "2024-01-15T10:30:00Z",
+          "estimatedDelivery": "2024-01-20T14:00:00Z",
+          "status": "PENDING",
+          "notes": "משלוח עד הבית"
+        },
+        "isPaid": true,
+        "isUrgent": false
+      },
+      {
+        "id": "ORD-2024-888",
+        "customerDetails": {
+          "firstName": "יהודה",
+          "lastName": "הלוי",
+          "email": "yuda@email.com"
+        },
+        "orderItems": [
+          {
+            "productName": "מכונת קפה",
+            "price": 1111,
+            "quantity": 1
+          },
+          {
+            "productName": "קפסולות רומא",
+            "price": 35,
+            "quantity": 12
+          }
+        ],
+        "metadata": {
+          "orderDate": "2024-01-24T10:20:00Z",
+          "estimatedDelivery": "2024-01-3T14:00:00Z",
+          "status": "APPROVED",
+          "notes": "איסוף עצמי"
+        },
+        "isPaid": false,
+        "isUrgent": false
+      },
+      {
+        "id": "ORD-2024-999",
+        "customerDetails": {
+          "firstName": "נעמי",
+          "lastName": "שמר",
+          "email": "naomi@email.com"
+        },
+        "orderItems": [
+          {
+            "productName": "בלוק כתיבה גדול",
+            "price": 56,
+            "quantity": 4
+          },
+          {
+            "productName": "עט נובע שחור",
+            "price": 2,
+            "quantity": 99
+          }
+        ],
+        "metadata": {
+          "orderDate": "2024-03-22T10:20:00Z",
+          "estimatedDelivery": "2024-04-2214:00:00Z",
+          "status": "OUT OF STOCK",
+          "notes": "להתקשר לתשלום"
+        },
+        "isPaid": false,
+        "isUrgent": true
+      }
+    ]
+  }
+
+  
