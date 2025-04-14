@@ -1,0 +1,59 @@
+{
+    "collection": {
+      "simpleArray": [
+        "תפוח",
+        "אבטיח",
+        "בננה",
+        "תותים"
+      ],
+      "anotherSimpleArray": [
+        "חתול",
+        "כלב",
+        "חתול"
+      ],
+      "nestedArray": [
+        [
+          "א-1",
+          "א-2"
+        ],
+        [
+          "ב-1",
+          "ב-2",
+          "ב-3"
+        ]
+      ],
+      "arrayOfObjects": [
+        {
+          "productName": "מייבש שיער",
+          "price": 100
+        },
+        {
+          "productName": "ספר",
+          "price": 25
+        },
+        {
+          "productName": "מחשב נייד",
+          "price": 150
+        }
+      ],
+      "arrayOfObjectsWithDuplicateNames": [
+        {
+          "productName": "מחשב נייד",
+          "price": 100
+        },
+        {
+          "productName": "ספר",
+          "price": 25
+        },
+        {
+          "productName": "מחשב נייד",
+          "price": 150
+        }
+      ],
+      "simpleCollection": {
+        "productName": "מחשב נייד",
+        "price": 150,
+        "quantity": 2
+      }
+    }
+  }
