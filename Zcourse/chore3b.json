@@ -1,0 +1,102 @@
+[
+    {
+      "id": 9310,
+      "status": "processing",
+      "currency": "ILS",
+      "version": "9.6.0",
+      "total": "313.42",
+      "billing": {
+        "company": null,
+        "city": "Tel Aviv",
+        "state": null,
+        "postcode": "23213",
+        "country": "IL",
+        "email": "test@example.com",
+        "phone": null,
+        "firstName": "הילה",
+        "lastName": "אוחנה",
+        "address1": "Tel Aviv",
+        "address2": null
+      },
+      "shipping": {
+        "company": null,
+        "city": "Tel Aviv",
+        "state": null,
+        "postcode": "23213",
+        "country": "IL",
+        "phone": null,
+        "firstName": "דניאל",
+        "lastName": "בלוך",
+        "address1": "Tel Aviv",
+        "address2": null
+      },
+      "number": "9310",
+      "refunds": [],
+      "parentId": 0,
+      "pricesIncludeTax": false,
+      "dateCreated": "2025-04-15T15:58:49.943Z",
+      "dateModified": "2025-04-15T15:58:49.943Z",
+      "discountTotal": "8.06",
+      "discountTax": "0.00",
+      "shippingTotal": "0.00",
+      "shippingTax": "0.00",
+      "cartTax": "0.00",
+      "totalTax": "0.00",
+      "customerId": 0,
+      "orderKey": "wc_order_16854",
+      "paymentMethod": null,
+      "paymentMethodTitle": null,
+      "transactionId": null,
+      "customerIpAddress": "192.168.1.209",
+      "customerUserAgent": "Mozilla/5.0",
+      "createdVia": "store-api",
+      "customerNote": null,
+      "dateCompleted": null,
+      "datePaid": "2025-04-15T15:58:49.943Z",
+      "cartHash": "d12ul8nwfz",
+      "metaData": [],
+      "lineItems": [
+        {
+          "id": 248,
+          "name": "אוזניות בלוטות'",
+          "quantity": 3,
+          "subtotal": "295.25",
+          "total": "93.23",
+          "taxes": [],
+          "sku": "SKU-8403",
+          "price": "220.52"
+        },
+        {
+          "id": 808,
+          "name": "מחשב נייד",
+          "quantity": 4,
+          "subtotal": "55.94",
+          "total": "228.25",
+          "taxes": [],
+          "sku": "SKU-8924",
+          "price": "246.35"
+        }
+      ],
+      "shippingLines": [
+        {
+          "id": 76,
+          "total": "0.00",
+          "taxes": [],
+          "methodTitle": "Free shipping",
+          "methodId": "free_shipping",
+          "instanceId": "1"
+        }
+      ],
+      "couponLines": [
+        {
+          "id": 81,
+          "code": "zerem",
+          "discount": "8.06",
+          "discountTax": "0",
+          "discountType": "percent"
+        }
+      ],
+      "paymentUrl": "https://example.com/checkout/order-pay/9310",
+      "currencySymbol": "₪"
+    }
+  ]

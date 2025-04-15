@@ -1,0 +1,122 @@
+[
+    {
+      "id": 645,
+      "status": "processing",
+      "currency": "ILS",
+      "version": "9.6.0",
+      "total": "317.98",
+      "billing": {
+        "company": null,
+        "city": "Tel Aviv",
+        "state": null,
+        "postcode": "23213",
+        "country": "IL",
+        "email": "izhar@docs.com",
+        "phone": null,
+        "firstName": "izHar",
+        "lastName": "Melamed",
+        "address1": "Tel Aviv",
+        "address2": null
+      },
+      "shipping": {
+        "company": null,
+        "city": "Tel Aviv",
+        "state": null,
+        "postcode": "23213",
+        "country": "IL",
+        "phone": null,
+        "firstName": "izHar",
+        "lastName": "Melamed",
+        "address1": "Tel Aviv",
+        "address2": null
+      },
+      "number": "645",
+      "refunds": [],
+      "parentId": 0,
+      "pricesIncludeTax": false,
+      "dateCreated": "2025-02-04T08:45:34.000Z",
+      "dateModified": "2025-02-04T08:45:57.000Z",
+      "discountTotal": "5.00",
+      "discountTax": "0.00",
+      "shippingTotal": "0.00",
+      "shippingTax": "0.00",
+      "cartTax": "0.00",
+      "totalTax": "0.00",
+      "customerId": 0,
+      "orderKey": "wc_order_tL70lYDdrhkPA",
+      "paymentMethod": null,
+      "paymentMethodTitle": null,
+      "transactionId": null,
+      "customerIpAddress": "81.199.22.86",
+      "customerUserAgent": "Mozilla/5.0",
+      "createdVia": "store-api",
+      "customerNote": null,
+      "dateCompleted": null,
+      "datePaid": "2025-02-04T08:45:57.000Z",
+      "cartHash": "ecc7f6cc387d0e86bb26f8215e089e37",
+      "metaData": [],
+      "lineItems": [
+        {
+          "id": 62,
+          "name": "FREE GUIDE",
+          "quantity": 1,
+          "subtotal": "0.00",
+          "total": "0.00",
+          "taxes": [],
+          "sku": null,
+          "price": 0
+        },
+        {
+          "id": 32,
+          "name": "Online Course - Automation",
+          "quantity": 1,
+          "subtotal": "99.99",
+          "total": "99.99",
+          "taxes": [],
+          "sku": "COURSE-456",
+          "price": 99.99
+        },
+        {
+          "id": 101,
+          "name": "Premium Ebook",
+          "quantity": 2,
+          "subtotal": "49.99",
+          "total": "49.99",
+          "taxes": [],
+          "sku": "EBOOK-123",
+          "price": 24.995
+        },
+        {
+          "id": 303,
+          "name": "Membership - 1 Year",
+          "quantity": 1,
+          "subtotal": "173.00",
+          "total": "173.00",
+          "taxes": [],
+          "sku": "MEMBERSHIP-789",
+          "price": 173
+        }
+      ],
+      "shippingLines": [
+        {
+          "id": 75,
+          "total": "0.00",
+          "taxes": [],
+          "methodTitle": "Free shipping",
+          "methodId": "free_shipping",
+          "instanceId": "1"
+        }
+      ],
+      "couponLines": [
+        {
+          "id": 76,
+          "code": "zerem",
+          "discount": "5.00",
+          "discountTax": "0",
+          "discountType": "percent"
+        }
+      ],
+      "paymentUrl": "https://itayzerem.com/checkout/order-pay/645/?pay_for_order=true&key=wc_order_tL70lYDdrhkPA",
+      "currencySymbol": "₪"
+    }
+  ]
