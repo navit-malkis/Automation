@@ -1,0 +1,539 @@
+{
+    "name": "Zcourse - Lesson #3 - Chore 3",
+    "flow": [
+        {
+            "id": 1,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {
+                "type": ""
+            },
+            "mapper": {
+                "json": "[\n  {\n    \"id\": 645,\n    \"status\": \"processing\",\n    \"currency\": \"ILS\",\n    \"version\": \"9.6.0\",\n    \"total\": \"317.98\",\n    \"billing\": {\n      \"company\": null,\n      \"city\": \"Tel Aviv\",\n      \"state\": null,\n      \"postcode\": \"23213\",\n      \"country\": \"IL\",\n      \"email\": \"izhar@docs.com\",\n      \"phone\": null,\n      \"firstName\": \"izHar\",\n      \"lastName\": \"Melamed\",\n      \"address1\": \"Tel Aviv\",\n      \"address2\": null\n    },\n    \"shipping\": {\n      \"company\": null,\n      \"city\": \"Tel Aviv\",\n      \"state\": null,\n      \"postcode\": \"23213\",\n      \"country\": \"IL\",\n      \"phone\": null,\n      \"firstName\": \"izHar\",\n      \"lastName\": \"Melamed\",\n      \"address1\": \"Tel Aviv\",\n      \"address2\": null\n    },\n    \"number\": \"645\",\n    \"refunds\": [],\n    \"parentId\": 0,\n    \"pricesIncludeTax\": false,\n    \"dateCreated\": \"2025-02-04T08:45:34.000Z\",\n    \"dateModified\": \"2025-02-04T08:45:57.000Z\",\n    \"discountTotal\": \"5.00\",\n    \"discountTax\": \"0.00\",\n    \"shippingTotal\": \"0.00\",\n    \"shippingTax\": \"0.00\",\n    \"cartTax\": \"0.00\",\n    \"totalTax\": \"0.00\",\n    \"customerId\": 0,\n    \"orderKey\": \"wc_order_tL70lYDdrhkPA\",\n    \"paymentMethod\": null,\n    \"paymentMethodTitle\": null,\n    \"transactionId\": null,\n    \"customerIpAddress\": \"81.199.22.86\",\n    \"customerUserAgent\": \"Mozilla/5.0\",\n    \"createdVia\": \"store-api\",\n    \"customerNote\": null,\n    \"dateCompleted\": null,\n    \"datePaid\": \"2025-02-04T08:45:57.000Z\",\n    \"cartHash\": \"ecc7f6cc387d0e86bb26f8215e089e37\",\n    \"metaData\": [],\n    \"lineItems\": [\n      {\n        \"id\": 62,\n        \"name\": \"FREE GUIDE\",\n        \"quantity\": 1,\n        \"subtotal\": \"0.00\",\n        \"total\": \"0.00\",\n        \"taxes\": [],\n        \"sku\": null,\n        \"price\": 0\n      },\n      {\n        \"id\": 32,\n        \"name\": \"Online Course - Automation\",\n        \"quantity\": 1,\n        \"subtotal\": \"99.99\",\n        \"total\": \"99.99\",\n        \"taxes\": [],\n        \"sku\": \"COURSE-456\",\n        \"price\": 99.99\n      },\n      {\n        \"id\": 101,\n        \"name\": \"Premium Ebook\",\n        \"quantity\": 2,\n        \"subtotal\": \"49.99\",\n        \"total\": \"49.99\",\n        \"taxes\": [],\n        \"sku\": \"EBOOK-123\",\n        \"price\": 24.995\n      },\n      {\n        \"id\": 303,\n        \"name\": \"Membership - 1 Year\",\n        \"quantity\": 1,\n        \"subtotal\": \"173.00\",\n        \"total\": \"173.00\",\n        \"taxes\": [],\n        \"sku\": \"MEMBERSHIP-789\",\n        \"price\": 173\n      }\n    ],\n    \"shippingLines\": [\n      {\n        \"id\": 75,\n        \"total\": \"0.00\",\n        \"taxes\": [],\n        \"methodTitle\": \"Free shipping\",\n        \"methodId\": \"free_shipping\",\n        \"instanceId\": \"1\"\n      }\n    ],\n    \"couponLines\": [\n      {\n        \"id\": 76,\n        \"code\": \"zerem\",\n        \"discount\": \"5.00\",\n        \"discountTax\": \"0\",\n        \"discountType\": \"percent\"\n      }\n    ],\n    \"paymentUrl\": \"https://itayzerem.com/checkout/order-pay/645/?pay_for_order=true&key=wc_order_tL70lYDdrhkPA\",\n    \"currencySymbol\": \"₪\"\n  }\n]"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "type": {
+                            "label": "Choose a data structure"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{1.lineItems}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "info",
+                        "value": "<p style=\"text-align: right;\">ID-{{4.id}}, שם-{{4.name}}, מחיר-{{4.price}}.</p>"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "info",
+                        "type": "any",
+                        "label": "info"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "builtin:BasicAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 4
+            },
+            "mapper": {
+                "id": "{{1.id}}",
+                "sku": "{{4.sku}}",
+                "info": "{{7.info}}",
+                "name": "{{4.name}}",
+                "price": "{{4.price}}",
+                "taxes": "{{4.taxes}}",
+                "total": "{{1.total}}",
+                "number": "{{1.number}}",
+                "status": "{{1.status}}",
+                "billing": "{{1.billing}}",
+                "cartTax": "{{1.cartTax}}",
+                "refunds": "{{1.refunds}}",
+                "version": "{{1.version}}",
+                "cartHash": "{{1.cartHash}}",
+                "currency": "{{1.currency}}",
+                "datePaid": "{{1.datePaid}}",
+                "metaData": "{{1.metaData}}",
+                "orderKey": "{{1.orderKey}}",
+                "parentId": "{{1.parentId}}",
+                "quantity": "{{4.quantity}}",
+                "shipping": "{{1.shipping}}",
+                "subtotal": "{{4.subtotal}}",
+                "totalTax": "{{1.totalTax}}",
+                "lineItems": "{{1.lineItems}}",
+                "createdVia": "{{1.createdVia}}",
+                "customerId": "{{1.customerId}}",
+                "paymentUrl": "{{1.paymentUrl}}",
+                "couponLines": "{{1.couponLines}}",
+                "dateCreated": "{{1.dateCreated}}",
+                "discountTax": "{{1.discountTax}}",
+                "shippingTax": "{{1.shippingTax}}",
+                "__IMTINDEX__": "{{4.`__IMTINDEX__`}}",
+                "customerNote": "{{1.customerNote}}",
+                "dateModified": "{{1.dateModified}}",
+                "__IMTLENGTH__": "{{4.`__IMTLENGTH__`}}",
+                "dateCompleted": "{{1.dateCompleted}}",
+                "discountTotal": "{{1.discountTotal}}",
+                "paymentMethod": "{{1.paymentMethod}}",
+                "shippingLines": "{{1.shippingLines}}",
+                "shippingTotal": "{{1.shippingTotal}}",
+                "transactionId": "{{1.transactionId}}",
+                "currencySymbol": "{{1.currencySymbol}}",
+                "pricesIncludeTax": "{{1.pricesIncludeTax}}",
+                "customerIpAddress": "{{1.customerIpAddress}}",
+                "customerUserAgent": "{{1.customerUserAgent}}",
+                "paymentMethodTitle": "{{1.paymentMethodTitle}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "Iterator [4]"
+                        },
+                        "target": {
+                            "label": "Custom"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 3,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "most expensive - name",
+                        "value": "{{get(get(sort(1.lineItems; \"desc\"; \"price\"); 1); \"name\")}}"
+                    },
+                    {
+                        "name": "most expensive - price",
+                        "value": "{{get(get(sort(1.lineItems; \"desc\"; \"price\"); 1); \"price\")}}"
+                    },
+                    {
+                        "name": "least expensive - name",
+                        "value": "{{get(get(sort(1.lineItems; \"asc\"; \"price\"); 1); \"name\")}}"
+                    },
+                    {
+                        "name": "least expensive - price",
+                        "value": "{{get(get(sort(1.lineItems; \"asc\"; \"price\"); 1); \"price\")}}"
+                    },
+                    {
+                        "name": "sum all products",
+                        "value": "{{sum(map(1.lineItems; \"price\"))}}"
+                    },
+                    {
+                        "name": "discount",
+                        "value": "{{sum(map(1.lineItems; \"price\")) * 1.discountTotal / 100}}"
+                    },
+                    {
+                        "name": "all bought products from agg",
+                        "value": "{{map(8.array; \"info\")}}"
+                    },
+                    {
+                        "name": "owner mailing address",
+                        "value": "navit.malkis@gmail.com"
+                    },
+                    {
+                        "name": "תאריך הרכישה",
+                        "value": "{{formatDate(1.dateCreated; \"DD.MM.YYYY\")}}"
+                    },
+                    {
+                        "name": "שעת הרכישה",
+                        "value": "{{formatDate(1.dateCreated; \"hh:mm\")}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "Define Variables"
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "most expensive - name",
+                        "type": "any",
+                        "label": "most expensive - name"
+                    },
+                    {
+                        "name": "most expensive - price",
+                        "type": "any",
+                        "label": "most expensive - price"
+                    },
+                    {
+                        "name": "least expensive - name",
+                        "type": "any",
+                        "label": "least expensive - name"
+                    },
+                    {
+                        "name": "least expensive - price",
+                        "type": "any",
+                        "label": "least expensive - price"
+                    },
+                    {
+                        "name": "sum all products",
+                        "type": "any",
+                        "label": "sum all products"
+                    },
+                    {
+                        "name": "discount",
+                        "type": "any",
+                        "label": "discount"
+                    },
+                    {
+                        "name": "all bought products from agg",
+                        "type": "any",
+                        "label": "all bought products from agg"
+                    },
+                    {
+                        "name": "owner mailing address",
+                        "type": "any",
+                        "label": "owner mailing address"
+                    },
+                    {
+                        "name": "תאריך הרכישה",
+                        "type": "any",
+                        "label": "תאריך הרכישה"
+                    },
+                    {
+                        "name": "שעת הרכישה",
+                        "type": "any",
+                        "label": "שעת הרכישה"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "google-email:ActionSendEmail",
+            "version": 2,
+            "parameters": {
+                "account": 6946502
+            },
+            "mapper": {
+                "cc": [],
+                "to": [
+                    "{{3.`owner mailing address`}}"
+                ],
+                "bcc": [],
+                "from": "",
+                "html": "<p style=\"text-align: right;\">להלן פרטי הזמנה מספר {{1.id}},</p>\r\n<p style=\"text-align: right;\">שנעשתה בתאריך {{3.`תאריך הרכישה`}} בשעה {{3.`שעת הרכישה`}}</p>\r\n<p style=\"text-align: right;\"><br></p>\r\n<p style=\"text-align: right;\">המוצר היקר ביותר היה</p>\r\n<p style=\"text-align: right; margin-right: 20px;\">{{3.`most expensive - name`}},</p>\r\n<p style=\"text-align: right; margin-right: 20px;\">במחיר של {{3.`most expensive - price`}}</p>\r\n<p style=\"text-align: right;\">המוצר הזול ביותר היה</p>\r\n<p style=\"text-align: right; margin-right: 20px;\">{{3.`least expensive - name`}},</p>\r\n<p style=\"text-align: right; margin-right: 20px;\">במחיר של {{3.`least expensive - price`}}</p>\r\n<p style=\"text-align: right;\"><br></p>\r\n<p style=\"text-align: right;\">סך התשלום היה {{3.`sum all products`}} לפני הנחה</p>\r\n<p style=\"text-align: right;\">סכום ההנחה הוא {{3.discount}}</p>\r\n<p style=\"text-align: right;\"><br></p>\r\n<p style=\"text-align: right;\">פירוט ההזמנה:</p>\r\n<p style=\"text-align: right;\">{{3.`all bought products from agg`}}</p>\r\n<p><br></p>\r\n<p>בברכת יומטוב,</p>",
+                "subject": " סיכום הזמנה מספר {{1.id}}",
+                "attachments": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1485,
+                    "y": 2
+                },
+                "restore": {
+                    "expect": {
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "navit.malkis Google Restricted connection (navit.malkis@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "from",
+                        "type": "text",
+                        "label": "From"
+                    },
+                    {
+                        "name": "to",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "To",
+                        "required": true
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "type": "filename",
+                                "label": "File name",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer",
+                                "label": "Data",
+                                "required": true,
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "cid",
+                                "type": "text",
+                                "label": "Content-ID"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "cc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Copy recipient"
+                    },
+                    {
+                        "name": "bcc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Blind copy recipient"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

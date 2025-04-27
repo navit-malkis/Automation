@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "model": "A",
+        "currency": "ILS",
+        "price": 200
+      },
+      {
+        "model": "B",
+        "currency": "ILS",
+        "price": 100
+      },
+      {
+        "model": "A",
+        "currency": "ILS",
+        "price": 300
+      }
+    ]
+  }
