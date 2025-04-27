@@ -1,0 +1,121 @@
+{
+    "product_code": "WATCH-SMART",
+    "quantity": 19,
+    "country": "ישראל"
+  }
+{
+    "product_code": "PHONE-X",
+    "quantity": 7,
+    "country": "ישראל"
+  }
+{
+    "product_code": "EARBUDS-PRO",
+    "quantity": 22,
+    "country": "ישראל"
+  }
+  ############################################
+  {
+    "products": [
+      {
+        "product_code": "LAPTOP-PRO",
+        "product_name": "מחשב נייד פרו",
+        "base_price": 3499.99
+      },
+      {
+        "product_code": "PHONE-X",
+        "product_name": "סמארטפון X",
+        "base_price": 1899.99
+      },
+      {
+        "product_code": "TABLET-AIR",
+        "product_name": "טאבלט אייר",
+        "base_price": 2199.99
+      },
+      {
+        "product_code": "WATCH-SMART",
+        "product_name": "שעון חכם",
+        "base_price": 899.99
+      },
+      {
+        "product_code": "EARBUDS-PRO",
+        "product_name": "אוזניות פרו",
+        "base_price": 599.99
+      }
+    ],
+    "quantity_discounts": [
+      {
+        "min_quantity": 1,
+        "max_quantity": 4,
+        "discount_percentage": 0
+      },
+      {
+        "min_quantity": 5,
+        "max_quantity": 9,
+        "discount_percentage": 5
+      },
+      {
+        "min_quantity": 10,
+        "max_quantity": 19,
+        "discount_percentage": 10
+      },
+      {
+        "min_quantity": 20,
+        "max_quantity": 49,
+        "discount_percentage": 15
+      },
+      {
+        "min_quantity": 50,
+        "max_quantity": 99999,
+        "discount_percentage": 20
+      }
+    ],
+    "coupons": [
+      {
+        "coupon_code": "SUMMER2024",
+        "discount_percentage": 10,
+        "expiry_date": "2024-08-31"
+      },
+      {
+        "coupon_code": "WELCOME",
+        "discount_percentage": 15,
+        "expiry_date": "2024-12-31"
+      },
+      {
+        "coupon_code": "FLASH50",
+        "discount_percentage": 50,
+        "expiry_date": "2024-01-31"
+      },
+      {
+        "coupon_code": "PREMIUM25",
+        "discount_percentage": 25,
+        "expiry_date": "2024-06-30"
+      }
+    ],
+    "countries": [
+      {
+        "country_name": "ישראל",
+        "base_shipping_cost": 0,
+        "vat_percentage": 17
+      },
+      {
+        "country_name": "ארה\"ב",
+        "base_shipping_cost": 150,
+        "vat_percentage": 0
+      },
+      {
+        "country_name": "בריטניה",
+        "base_shipping_cost": 200,
+        "vat_percentage": 20
+      },
+      {
+        "country_name": "גרמניה",
+        "base_shipping_cost": 180,
+        "vat_percentage": 19
+      },
+      {
+        "country_name": "צרפת",
+        "base_shipping_cost": 190,
+        "vat_percentage": 20
+      }
+    ]
+  }
